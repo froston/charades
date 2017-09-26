@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   context: path.resolve(__dirname, '..'),
@@ -8,7 +9,7 @@ const config = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../public'),
+    path: path.resolve(__dirname, '../build'),
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -22,6 +23,11 @@ const config = {
       },
     }),
     new webpack.NoEmitOnErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Charades',
+      filename: 'index.html',
+      template: 'public/index.html'
+    })
   ],
   module: {
     rules: [

@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   context: path.resolve(__dirname, '..'),
@@ -14,6 +15,10 @@ const config = {
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Charades - Dev',
+      filename: 'public/index.html'
+    })
   ],
   module: {
     rules: [
