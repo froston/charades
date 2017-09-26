@@ -1,10 +1,11 @@
 import React from 'react';
-import './styles.css';
+import PropTypes from 'prop-types'
 import * as consts from '../const'
+import './ChooseActivity.css'
 
 const ChooseActivity = (props) => {
   return (
-    <div className="fase">
+    <div className="fase activity">
       <button 
         id="speaking" 
         className="button" 
@@ -30,4 +31,8 @@ const ChooseActivity = (props) => {
   )
 }
 
-export default ChooseActivity;
+ChooseActivity.propTypes = {
+  handleActivity: PropTypes.func.isRequired
+}
+
+export default ChooseActivity

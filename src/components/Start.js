@@ -1,4 +1,6 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import './Start.css'
 
 const Start = (props) => {
   const handleStart = () => {
@@ -12,9 +14,9 @@ const Start = (props) => {
     }
   }
   return (
-    <div className={props.timer ? " fase start counting" : "fase start"}>
+    <div className={(props.timer ? " fase start counting " : "fase start ") + props.activity}>
       <br />
-      <h2>{props.activity}:</h2>
+      <h2>{props.activityText}:</h2>
       <h1>VERY LONG WORD</h1>
       <br />
       {props.timer ? 
@@ -30,4 +32,16 @@ const Start = (props) => {
   )
 }
 
-export default Start;
+Start.propTypes = {
+  startTimer: PropTypes.func.isRequired,
+  resetGame: PropTypes.func.isRequired,
+  activity: PropTypes.string.isRequired,
+  activityText: PropTypes.string.isRequired,
+  timer: PropTypes.number
+}
+
+Start.defaultProps = {
+  timer: null
+}
+
+export default Start

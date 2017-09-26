@@ -6,6 +6,7 @@ import {
 } from '../components'
 import * as consts from '../const'
 import { countdown, finish } from '../sounds'
+import './App.css'
 
 class App extends React.Component {
   constructor(props) {
@@ -81,6 +82,19 @@ class App extends React.Component {
       default:
         return "Choose Activity!"
     }
+  } 
+  
+  getActivityName = () => {
+    switch (this.state.activity) {
+      case consts.ACTIVITY_SPEAKING:
+        return "speaking"
+      case consts.ACTIVITY_DRAWING:
+        return "drawing"
+      case consts.ACTIVITY_PANTOMIMA:
+        return "pantomima"
+      default:
+        return "speaking"
+    }
   }
 
   render() {
@@ -90,7 +104,7 @@ class App extends React.Component {
         component = <ChooseActivity handleActivity={this.handleActivity} />
         break
       case consts.FASE_LEVEL:
-        component = <ChooseLevel handleLevel={this.handleLevel}/>
+        component = <ChooseLevel handleLevel={this.handleLevel} activity={this.getActivityName()} />
         break
       case consts.FASE_START:
         component = 
@@ -98,7 +112,8 @@ class App extends React.Component {
             startTimer={this.startTimer} 
             resetGame={this.resetGame} 
             timer={this.state.timer} 
-            activity={this.getActivityText()}
+            activity={this.getActivityName()}
+            activityText={this.getActivityText()}
           />
         break
       default:

@@ -1,0 +1,38 @@
+.fase.start h1 {
+  font-size: 50px;
+}
+
+.fase.start h2 {
+  font-size: 20px;
+}
+
+.fase.start button {
+  width: 80%;
+  min-height: 200px;
+  color: #fff;
+  font-size: 50px;
+  border-radius: 20px;
+}
+
+.fase.start.speaking.counting,
+.fase.start.speaking button {
+  background-color: #5d1ec9;
+  color: #fff;
+}
+
+.fase.start.drawing.counting,
+.fase.start.drawing button {
+  background-color: #1dc95c;
+  color: #fff;
+}
+
+.fase.start.pantomima.counting,
+.fase.start.pantomima button {
+  background-color: #c91d40;
+  color: #fff;
+}
+
+.fase.start span {
+  font-size: 200px;
+  color: #fff;
+}

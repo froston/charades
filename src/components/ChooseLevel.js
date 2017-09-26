@@ -1,9 +1,10 @@
-import React from 'react';
-import './styles.css';
+import React from 'react'
+import PropTypes from 'prop-types'
 import * as consts from '../const'
+import './ChooseLevel.css'
 
 const ChooseLevel = (props) => (
-  <div className="fase">
+  <div className={"fase level " + props.activity}>
     <button 
       id="easy" 
       className="button" 
@@ -26,6 +27,11 @@ const ChooseLevel = (props) => (
       Difficult
     </button>
   </div>
-);
+)
 
-export default ChooseLevel;
+ChooseLevel.propTypes = {
+  activity: PropTypes.string.isRequired,
+  handleLevel: PropTypes.func.isRequired
+}
+
+export default ChooseLevel

@@ -1,0 +1,11 @@
+.fase {
+  height: 100vh;
+  min-height: 100%;
+  text-align: center;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
