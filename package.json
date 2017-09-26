@@ -2,17 +2,21 @@
   "name": "charades",
   "version": "0.1.0",
   "description": "Charades game",
+  "homepage": "https://froston.github.io/charades",
   "repository": {
     "type": "git",
     "url": "git://github.com/froston/charades.git"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack ./src/client/index.js"
+    "start": "webpack-dev-server --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Pavel Muller",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
