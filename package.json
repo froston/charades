@@ -2,6 +2,10 @@
   "name": "charades",
   "version": "0.1.0",
   "description": "Charades game",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/froston/charades.git"
+  },
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack ./src/client/index.js"
