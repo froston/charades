@@ -8,10 +8,11 @@ const config = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: './build'
+    path: path.resolve(__dirname, '../build'),
+    publicPath: '/static/',
   },
   plugins: [
-    new webpack.optimize.UglifyJSPlugin({
+    new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
         comparisons: false,
