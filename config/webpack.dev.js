@@ -8,7 +8,6 @@ const config = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: '/static/',
     pathinfo: true,
   },
   plugins: [
