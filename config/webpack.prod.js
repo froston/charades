@@ -2,14 +2,17 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var buildDir = path.resolve(__dirname, '../build');
+var appDir = path.resolve(__dirname, '../src');
+
 const config = {
   context: path.resolve(__dirname, '..'),
   devtool: false,
   bail: true,
-  entry: './src/index.js',
+  entry: appDir + '/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../public'),
+    path: buildDir,
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -41,9 +44,9 @@ const config = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.mp3$/,
-        use: 'file-loader'
-      }
+        test: [/\.mp3$/, /\.svg$/],
+        use: 'url-loader'
+      },
     ],
   }
 }

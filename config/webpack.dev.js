@@ -2,13 +2,16 @@ const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var buildDir = path.resolve(__dirname, '../public');
+var appDir = path.resolve(__dirname, '../src');
+
 const config = {
   context: path.resolve(__dirname, '..'),
   devtool: 'inline-source-map',
-  entry: './src/index.js',
+  entry: appDir + '/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    path: buildDir,
     pathinfo: true,
   },
   plugins: [
@@ -17,7 +20,8 @@ const config = {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       title: 'Charades - Dev',
-      filename: 'public/index.html'
+      filename: 'index.html',
+      template: 'public/index.html'
     })
   ],
   module: {
@@ -25,20 +29,21 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.mp3$/,
-        use: 'file-loader',
-      }
+        test: [/\.mp3$/, /\.svg$/],
+        use: 'url-loader'
+      },
     ],
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './public',
+    contentBase: buildDir,
     port: 3000,
   },
   performance: {

@@ -29,15 +29,14 @@ class App extends React.Component {
   }
 
   startTimer = () => {
-    const { timer } = this.state
     this.setState({ timer: consts.TIMER })
     this.counter = setInterval(() => {
-      this.setState({ timer: timer - 1 })
+      this.setState({ timer: this.state.timer - 1 })
       // countdown last 5 seconds
-      if (timer > 0 && timer < 5 ) {
+      if (this.state.timer > 0 && this.state.timer < 5 ) {
         this.playSound(beep)
       }
-      if (timer === 0) {
+      if (this.state.timer === 0) {
         this.stopTimer()
         this.playSound(finish)
       }

@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d build"
   },
   "author": "Pavel Muller",
   "license": "MIT",
@@ -34,6 +34,7 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.7.1"
   }
