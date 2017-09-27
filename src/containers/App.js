@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import JSONPath from 'jsonpath-plus'
 import { 
   ChooseActivity, 
   ChooseLevel, 
@@ -6,6 +7,7 @@ import {
 } from '../components'
 import * as consts from '../const'
 import { beep, finish } from '../sounds'
+import { words } from '../data'
 import lang from '../lang'
 import './App.css'
 
@@ -17,6 +19,8 @@ class App extends React.Component {
       activity: null,
       level: null,
       timer: null,
+      word: null,
+      usedWords: []
     }
   }
 
@@ -25,7 +29,9 @@ class App extends React.Component {
   }
 
   handleLevel = (level) => {
-    this.setState({ fase: consts.FASE_START, level })
+    this.setState({ fase: consts.FASE_START, level }, () => { 
+      this.getWord()
+    })
   }
 
   startTimer = () => {
@@ -57,7 +63,8 @@ class App extends React.Component {
       fase: consts.FASE_ACTIVITY,
       activity: null,
       level: null,
-      timer: null
+      timer: null,
+      word: null,
     })
   }
 
@@ -87,6 +94,36 @@ class App extends React.Component {
     }
   }
 
+  getLevelName = () => {
+    switch (this.state.level) {
+      case consts.LEVEL_EASY:
+        return "easy"
+      case consts.LEVEL_INTERMEDIATE:
+        return "intermediate"
+      case consts.LEVEL_DIFFICULT:
+        return "difficult"
+      default:
+        return "easy"
+    }
+  }
+
+  getWord = () => {
+    const allWords = words
+    allWords.filter((word) => {
+      return word.activity[this.getActivityName()] === this.getLevelName() && !this.state.usedWords.includes(word.value)
+    })
+    if (allWords.length > 0) {
+      const index = Math.floor(Math.random() * allWords.length);
+      const finalWord = allWords[index].value;
+      this.setState({ 
+        word: finalWord, 
+        usedWords: this.state.usedWords.concat(finalWord)
+      })
+    } else {
+      this.resetGame()
+    }
+  }
+
   render() {
     let component;
     switch (this.state.fase) {
@@ -97,8 +134,9 @@ class App extends React.Component {
         component = <ChooseLevel handleLevel={this.handleLevel} activity={this.getActivityName()} />
         break
       case consts.FASE_START:
-        component = 
+        component = this.state.word &&
           <Start 
+            word={this.state.word}
             startTimer={this.startTimer} 
             resetGame={this.resetGame} 
             timer={this.state.timer} 

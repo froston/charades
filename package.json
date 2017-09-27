@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^1.0.0",
+    "jsonpath-plus": "^0.16.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"

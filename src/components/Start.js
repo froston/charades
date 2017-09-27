@@ -18,7 +18,7 @@ const Start = (props) => {
     <div className={(props.timer ? " fase start counting " : "fase start ") + props.activity}>
       <br />
       <h2>{props.activityText}:</h2>
-      <h1>VERY LONG WORD</h1>
+      <h1>{props.word}</h1>
       <br />
       {props.timer ? 
         <span>{props.timer}</span>
