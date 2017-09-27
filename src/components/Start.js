@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import lang from '../lang'
 import './Start.css'
 
 const Start = (props) => {
@@ -24,9 +25,9 @@ const Start = (props) => {
         :
         // Reset or Start button
         props.timer === 0 ?
-          <button onClick={handleReset} >RESET GAME</button>
+          <button onClick={handleReset} >{lang.resetButton}</button>
         :
-          <button onClick={handleStart} >START GAME</button>
+          <button onClick={handleStart} >{lang.startButton}</button>
       }
     </div>
   )

@@ -5,7 +5,8 @@ import {
   Start
 } from '../components'
 import * as consts from '../const'
-import { countdown, finish } from '../sounds'
+import { beep, finish } from '../sounds'
+import lang from '../lang'
 import './App.css'
 
 class App extends React.Component {
@@ -20,25 +21,25 @@ class App extends React.Component {
   }
 
   handleActivity = (activity) => {
-    this.setState({ fase: consts.FASE_LEVEL, activity }, 
-      () => console.log("ACTIVITY:" + this.state.activity))
+    this.setState({ fase: consts.FASE_LEVEL, activity })
   }
 
   handleLevel = (level) => {
-    this.setState({ fase: consts.FASE_START, level }, 
-      () => console.log("LEVEL:" + this.state.level))
+    this.setState({ fase: consts.FASE_START, level })
   }
 
   startTimer = () => {
+    const { timer } = this.state
     this.setState({ timer: consts.TIMER })
     this.counter = setInterval(() => {
-      this.setState({ timer: this.state.timer - 1 })
-      if (this.state.timer === 4) {
-        this.playCountdown()
+      this.setState({ timer: timer - 1 })
+      // countdown last 5 seconds
+      if (timer > 0 && timer < 5 ) {
+        this.playSound(beep)
       }
-      if (this.state.timer === 0) {
+      if (timer === 0) {
         this.stopTimer()
-        this.playEnd()
+        this.playSound(finish)
       }
     }, 1000)
   }
@@ -47,18 +48,8 @@ class App extends React.Component {
     clearInterval(this.counter)
   }
 
-  playCountdown = () => {
-    const audio = new Audio(countdown);
-    audio.play()
-  }  
-  
-  playEnd = () => {
-    const audio = new Audio(finish);
-    audio.play()
-  }
-
-  startCountdownSound = () => {
-    const audio = new Audio(countdown);
+  playSound = (file) => {
+    const audio = new Audio(file);
     audio.play()
   }
 
@@ -74,13 +65,13 @@ class App extends React.Component {
   getActivityText = () => {
     switch (this.state.activity) {
       case consts.ACTIVITY_SPEAKING:
-        return "Explain"
+        return lang.speaking
       case consts.ACTIVITY_DRAWING:
-        return "Draw"
+        return lang.drawing
       case consts.ACTIVITY_PANTOMIMA:
-        return "Play"
+        return lang.pantomima
       default:
-        return "Choose Activity!"
+        return lang.speaking
     }
   } 
   

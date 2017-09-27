@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as consts from '../const'
+import lang from '../lang'
 import './ChooseLevel.css'
 
 const ChooseLevel = (props) => (
@@ -10,21 +11,21 @@ const ChooseLevel = (props) => (
       className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_EASY)}
     >
-      Easy
+      {lang.easy}
     </button>
     <button 
       id="intermediate" 
       className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_INTERMEDIATE)}
     >
-      Intermediate
+      {lang.intermediate}
     </button>
     <button 
       id="difficult" 
       className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_DIFFICULT)}
     >
-      Difficult
+      {lang.difficult}
     </button>
   </div>
 )
