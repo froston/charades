@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import PropTypes from 'prop-types'
 import * as consts from '../const'
 import lang from '../lang'
@@ -13,7 +13,7 @@ const ChooseActivity = (props) => (
       onClick={() => props.handleActivity(consts.ACTIVITY_SPEAKING)}
     >
       <img src={speaker} alt={lang.speaking} style={{ width: 50 }} />
-      {lang.speaking}
+      <span>{lang.speaking}</span>
     </button>
     <button 
       id="drawing" 
@@ -21,7 +21,7 @@ const ChooseActivity = (props) => (
       onClick={() => props.handleActivity(consts.ACTIVITY_DRAWING)}
     >
       <img src={draw} alt={lang.drawing} style={{ width: 50 }} />
-      {lang.drawing}
+      <span>{lang.drawing}</span>
     </button>
     <button 
       id="pantomima" 
@@ -29,7 +29,7 @@ const ChooseActivity = (props) => (
       onClick={() => props.handleActivity(consts.ACTIVITY_PANTOMIMA)}
     >
       <img src={theatre} alt={lang.pantomima} style={{ width: 50 }} />
-      {lang.pantomima}
+      <span>{lang.pantomima}</span>
     </button>
   </div>
 )

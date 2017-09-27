@@ -5,6 +5,12 @@
   font-size: 50px;
 }
 
+.fase.activity button > img,
+.fase.activity button > span {
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
 .fase.activity #speaking {
   background-color: #5d1ec9;
 }
