@@ -6,7 +6,8 @@ const lang = {
   intermediate: 'Medio',
   difficult: 'Dificil',
   startButton: 'Empezar',
-  resetButton: 'Reiniciar'
+  resetButton: 'Reiniciar',
+  nextButton: 'Otra Palabra'
 }
 
 export default lang

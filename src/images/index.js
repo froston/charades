@@ -1,9 +1,9 @@
-import speaker from './speaker.svg'
+import microphone from './microphone.svg'
 import draw from './draw.svg'
 import theatre from './theatre.svg'
 
 export {
-  speaker,
+  microphone,
   draw,
   theatre
 }

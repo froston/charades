@@ -45,12 +45,21 @@ class App extends React.Component {
       if (this.state.timer === 0) {
         this.stopTimer()
         this.playSound(finish)
+        this.vibrate()
       }
     }, 1000)
   }
 
   stopTimer = () => {
     clearInterval(this.counter)
+  }
+
+  vibrate = () => {
+    // enable vibration support
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate
+    if (navigator.vibrate) {
+      navigator.vibrate(1000);
+    }
   }
 
   playSound = (file) => {
@@ -94,30 +103,18 @@ class App extends React.Component {
     }
   }
 
-  getLevelName = () => {
-    switch (this.state.level) {
-      case consts.LEVEL_EASY:
-        return "easy"
-      case consts.LEVEL_INTERMEDIATE:
-        return "intermediate"
-      case consts.LEVEL_DIFFICULT:
-        return "difficult"
-      default:
-        return "easy"
-    }
-  }
-
   getWord = () => {
     const allWords = words
     allWords.filter((word) => {
-      return word.activity[this.getActivityName()] === this.getLevelName() && !this.state.usedWords.includes(word.value)
+      return word.activity[this.getActivityName()] === this.state.level && 
+        !this.state.usedWords.includes(word.value + "__" + this.state.level)
     })
     if (allWords.length > 0) {
       const index = Math.floor(Math.random() * allWords.length);
       const finalWord = allWords[index].value;
       this.setState({ 
         word: finalWord, 
-        usedWords: this.state.usedWords.concat(finalWord)
+        usedWords: this.state.usedWords.concat(finalWord + "__" + this.state.level)
       })
     } else {
       this.resetGame()

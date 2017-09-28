@@ -8,21 +8,18 @@ const ChooseLevel = (props) => (
   <div className={"fase level " + props.activity}>
     <button 
       id="easy" 
-      className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_EASY)}
     >
       {lang.easy}
     </button>
     <button 
       id="intermediate" 
-      className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_INTERMEDIATE)}
     >
       {lang.intermediate}
     </button>
     <button 
       id="difficult" 
-      className="button" 
       onClick={() => props.handleLevel(consts.LEVEL_DIFFICULT)}
     >
       {lang.difficult}
