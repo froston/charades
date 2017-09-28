@@ -1,3 +1,3 @@
 ## Charades game
 
-https://froston.github.io/charades/public/
+https://froston.github.io/charades
