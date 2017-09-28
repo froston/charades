@@ -27,6 +27,9 @@ class App extends React.Component {
 
   handleActivity = (activity) => {
     this.setState({ phase: consts.PHASE_LEVEL, activity })
+    if (activity === consts.ACTIVITY_SPEAKING) {
+      this.enableSounds()
+    }
   }
 
   handleLevel = (level) => {
@@ -66,6 +69,14 @@ class App extends React.Component {
   playSound = (file) => {
     const audio = new Audio(file)
     audio.play()
+  }
+
+  enableSounds = () => {
+    // workaround for mobile devices
+    // https://blog.foolip.org/2014/02/10/media-playback-restrictions-in-blink/
+    const audio = new Audio(beep)
+    audio.play()
+    audio.pause()
   }
 
   resetGame = () => {
