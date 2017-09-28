@@ -1,5 +1,5 @@
 .fase.start h1 {
-  font-size: 100px;
+  font-size: 50px;
   text-transform: uppercase;
 }
 
@@ -37,6 +37,6 @@
 }
 
 .fase.start span {
-  font-size: 200px;
+  font-size: 100px;
   color: #fff;
 }
