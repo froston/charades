@@ -158,13 +158,19 @@ class App extends React.Component {
           />
     }
     return (
-      <CSSTransitionGroup
-        transitionName="component"
-        transitionAppear
-        transitionAppearTimeout={300}
-      >
-        {component}
-      </CSSTransitionGroup>
+      <div>
+        <CSSTransitionGroup
+          transitionName="component"
+          transitionAppear
+          transitionAppearTimeout={300}
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {component}
+        </CSSTransitionGroup>
+        <audio src={beep} />
+        <audio src={finish} />
+      </div>
     )
   }
 }
