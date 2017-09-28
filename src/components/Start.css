@@ -1,5 +1,5 @@
 .fase.start h1 {
-  font-size: 50px;
+  font-size: 100px;
   text-transform: uppercase;
 }
 
@@ -19,18 +19,21 @@
 .fase.start.speaking button {
   background-color: #5d1ec9;
   color: #fff;
+  transition: all .5s;
 }
 
 .fase.start.drawing.counting,
 .fase.start.drawing button {
   background-color: #1dc95c;
   color: #fff;
+  transition: all .5s;
 }
 
 .fase.start.pantomima.counting,
 .fase.start.pantomima button {
   background-color: #c91d40;
   color: #fff;
+  transition: all .5s;
 }
 
 .fase.start span {

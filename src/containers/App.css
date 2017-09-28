@@ -9,4 +9,37 @@ button {
   padding: 0;
   border: 0;
   text-transform: uppercase; 
+  opacity: 1;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.component-appear {
+  -ms-transform: translateY(-1000px);
+  -webkit-transform: translateY(-1000px);
+  transform: translateY(-1000px);
+}
+
+.component-appear.component-appear-active {
+  -ms-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  transition: all .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.component-enter {
+  -ms-transform: translateX(1500px);
+  -webkit-transform: translateX(1500px);
+  transform: translateX(1500px);
+}
+
+.component-enter.component-enter-active {
+  -ms-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  transition: all .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }

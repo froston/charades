@@ -1,9 +1,9 @@
 export const TIMER = 60
 
 // Game fases
-export const FASE_ACTIVITY = 1
-export const FASE_LEVEL = 2
-export const FASE_START = 3
+export const PHASE_ACTIVITY = 1
+export const PHASE_LEVEL = 2
+export const PHASE_START = 3
 
 // Activities
 export const ACTIVITY_SPEAKING = 1

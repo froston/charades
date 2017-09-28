@@ -1,5 +1,6 @@
 import React from 'react'
 import JSONPath from 'jsonpath-plus'
+import { CSSTransitionGroup } from 'react-transition-group'
 import { 
   ChooseActivity, 
   ChooseLevel, 
@@ -15,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      fase: consts.FASE_ACTIVITY,
+      phase: consts.PHASE_ACTIVITY,
       activity: null,
       level: null,
       timer: null,
@@ -25,11 +26,11 @@ class App extends React.Component {
   }
 
   handleActivity = (activity) => {
-    this.setState({ fase: consts.FASE_LEVEL, activity })
+    this.setState({ phase: consts.PHASE_LEVEL, activity })
   }
 
   handleLevel = (level) => {
-    this.setState({ fase: consts.FASE_START, level }, () => { 
+    this.setState({ phase: consts.PHASE_START, level }, () => { 
       this.getWord()
     })
   }
@@ -58,18 +59,18 @@ class App extends React.Component {
     // enable vibration support
     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate
     if (navigator.vibrate) {
-      navigator.vibrate(1000);
+      navigator.vibrate(1000)
     }
   }
 
   playSound = (file) => {
-    const audio = new Audio(file);
+    const audio = new Audio(file)
     audio.play()
   }
 
   resetGame = () => {
     this.setState({
-      fase: consts.FASE_ACTIVITY,
+      phase: consts.PHASE_ACTIVITY,
       activity: null,
       level: null,
       timer: null,
@@ -125,16 +126,26 @@ class App extends React.Component {
 
   render() {
     let component;
-    switch (this.state.fase) {
-      case consts.FASE_ACTIVITY:
-        component = <ChooseActivity handleActivity={this.handleActivity} />
+    switch (this.state.phase) {
+      case consts.PHASE_ACTIVITY:
+        component = 
+          <ChooseActivity 
+            key={consts.PHASE_ACTIVITY} 
+            handleActivity={this.handleActivity} 
+          />
         break
-      case consts.FASE_LEVEL:
-        component = <ChooseLevel handleLevel={this.handleLevel} activity={this.getActivityName()} />
+      case consts.PHASE_LEVEL:
+        component = 
+          <ChooseLevel 
+            key={consts.PHASE_LEVEL} 
+            handleLevel={this.handleLevel} 
+            activity={this.getActivityName()} 
+          />
         break
-      case consts.FASE_START:
+      case consts.PHASE_START:
         component = this.state.word &&
           <Start 
+            key={consts.PHASE_START}
             word={this.state.word}
             startTimer={this.startTimer} 
             resetGame={this.resetGame} 
@@ -144,9 +155,23 @@ class App extends React.Component {
           />
         break
       default:
-        component = <ChooseActivity handleActivity={this.handleActivity} />
+        component =
+          <ChooseActivity 
+            key={consts.PHASE_ACTIVITY} 
+            handleActivity={this.handleActivity} 
+          />
     }
-    return component
+    return (
+      <CSSTransitionGroup
+        transitionName="component"
+        transitionAppear
+        transitionEnter
+        transitionAppearTimeout={500}
+        transitionEnterTimeout={500}
+      >
+        {component}
+      </CSSTransitionGroup>
+    )
   }
 }
 
