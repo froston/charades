@@ -30,16 +30,3 @@ button:hover {
   transform: translateY(0px);
   transition: all .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-
-.component-enter {
-  -ms-transform: translateX(1000px);
-  -webkit-transform: translateX(1000px);
-  transform: translateX(1000px);
-}
-
-.component-enter.component-enter-active {
-  -ms-transform: translateX(0px);
-  -webkit-transform: translateX(0px);
-  transform: translateX(0px);
-  transition: all .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}

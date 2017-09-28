@@ -130,14 +130,12 @@ class App extends React.Component {
       case consts.PHASE_ACTIVITY:
         component = 
           <ChooseActivity
-            key={consts.PHASE_ACTIVITY}
             handleActivity={this.handleActivity} 
           />
         break
       case consts.PHASE_LEVEL:
         component = 
           <ChooseLevel 
-            key={consts.PHASE_LEVEL}
             handleLevel={this.handleLevel} 
             activity={this.getActivityName()} 
           />
@@ -145,7 +143,6 @@ class App extends React.Component {
       case consts.PHASE_START:
         component = this.state.word &&
           <Start 
-            key={consts.PHASE_START}
             word={this.state.word}
             startTimer={this.startTimer} 
             resetGame={this.resetGame} 
@@ -157,7 +154,6 @@ class App extends React.Component {
       default:
         component =
           <ChooseActivity 
-            key={consts.PHASE_ACTIVITY}
             handleActivity={this.handleActivity} 
           />
     }
@@ -165,10 +161,7 @@ class App extends React.Component {
       <CSSTransitionGroup
         transitionName="component"
         transitionAppear
-        transitionEnter
         transitionAppearTimeout={300}
-        transitionEnterTimeout={300}
-        transitionLeaveTimeout={300}
       >
         {component}
       </CSSTransitionGroup>
