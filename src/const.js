@@ -1,4 +1,4 @@
-export const TIMER = 15
+export const TIMER = 60
 
 // Game fases
 export const FASE_ACTIVITY = 1

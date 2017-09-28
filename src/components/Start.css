@@ -1,5 +1,6 @@
 .fase.start h1 {
   font-size: 50px;
+  text-transform: uppercase;
 }
 
 .fase.start h2 {
@@ -8,7 +9,7 @@
 
 .fase.start button {
   width: 80%;
-  min-height: 200px;
+  min-height: 120px;
   color: #fff;
   font-size: 50px;
   border-radius: 20px;

@@ -1,4 +1,4 @@
-export default words = 
+const words = 
 [
   {
     "value": "Jehová",
@@ -1447,3 +1447,5 @@ export default words =
     "speaking": 1
   }
 ]
+
+export default words

@@ -1,3 +1,3 @@
-import lang from './en'
+import lang from './es'
 
 export default lang

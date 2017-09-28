@@ -1,10 +1,10 @@
 const lang = {
-  speaking: 'Habla',
-  drawing: 'Dibuja',
-  pantomima: 'Actua',
-  easy: 'Facil',
-  intermediate: 'Medio',
-  difficult: 'Dificil',
+  speaking: 'Hablá',
+  drawing: 'Dibujá',
+  pantomima: 'Actuá',
+  easy: 'Fácil',
+  intermediate: 'Intermedio',
+  difficult: 'Difícil',
   startButton: 'Empezar',
   resetButton: 'Reiniciar',
   nextButton: 'Otra Palabra'

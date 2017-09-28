@@ -6,7 +6,7 @@
           "request": "attach",
           "name": "Attach Chrome",
           "port": 9222,
-          "url": "http://localhost:3000*",
+          "url": "http://localhost:3001*",
           "webRoot": "${workspaceRoot}/src",
           "sourceMapPathOverrides": {
               "webpack:///./src/*": "${webRoot}/*"
@@ -20,7 +20,7 @@
           "webRoot": "${workspaceRoot}/src",
           "userDataDir": "${workspaceRoot}/.chrome",
           "sourceMapPathOverrides": {
-              "webpack:///src/*": "${webRoot}/*"
+              "webpack:///./src/*": "${webRoot}/*"
           }
       }
       

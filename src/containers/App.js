@@ -105,16 +105,18 @@ class App extends React.Component {
 
   getWord = () => {
     const allWords = words
-    allWords.filter((word) => {
-      return word.activity[this.getActivityName()] === this.state.level && 
-        !this.state.usedWords.includes(word.value + "__" + this.state.level)
+    const filtered = allWords.filter((word) => {
+      // choose a word fitting activity, level and must not be used yet
+      return word[this.getActivityName()] === this.state.level && 
+        !this.state.usedWords.includes(word.value + "__" + this.state.activity)
     })
-    if (allWords.length > 0) {
-      const index = Math.floor(Math.random() * allWords.length);
-      const finalWord = allWords[index].value;
+    if (filtered.length > 0) {
+      // choose random word from the selection
+      const index = Math.floor(Math.random() * filtered.length);
+      const finalWord = filtered[index].value;
       this.setState({ 
         word: finalWord, 
-        usedWords: this.state.usedWords.concat(finalWord + "__" + this.state.level)
+        usedWords: this.state.usedWords.concat(finalWord + "__" + this.state.activity)
       })
     } else {
       this.resetGame()
