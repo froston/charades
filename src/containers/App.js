@@ -21,7 +21,8 @@ class App extends React.Component {
       level: null,
       timer: null,
       word: null,
-      usedWords: []
+      usedWords: [],
+      touched: false
     }
   }
 
@@ -75,8 +76,14 @@ class App extends React.Component {
     // workaround for mobile devices
     // https://blog.foolip.org/2014/02/10/media-playback-restrictions-in-blink/
     const audio = new Audio(beep)
-    audio.play()
-    audio.pause()
+    audio.volume = 0
+    
+    var playPromise = audio.play()
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        audio.pause()
+      })
+    }
   }
 
   resetGame = () => {
@@ -87,6 +94,10 @@ class App extends React.Component {
       timer: null,
       word: null,
     })
+  }
+
+  handleTouch = (moment) => {
+    this.setState({ touched: moment == 'start' ? true : false })
   }
 
   getActivityText = () => {
@@ -136,48 +147,39 @@ class App extends React.Component {
   }
 
   render() {
-    let component;
-    switch (this.state.phase) {
-      case consts.PHASE_ACTIVITY:
-        component = 
-          <ChooseActivity
-            handleActivity={this.handleActivity} 
-          />
-        break
-      case consts.PHASE_LEVEL:
-        component = 
-          <ChooseLevel 
-            handleLevel={this.handleLevel} 
-            activity={this.getActivityName()} 
-          />
-        break
-      case consts.PHASE_START:
-        component = this.state.word &&
-          <Start 
-            word={this.state.word}
-            startTimer={this.startTimer} 
-            resetGame={this.resetGame} 
-            timer={this.state.timer} 
-            activity={this.getActivityName()}
-            activityText={this.getActivityText()}
-          />
-        break
-      default:
-        component =
-          <ChooseActivity 
-            handleActivity={this.handleActivity} 
-          />
-    }
     return (
       <div>
         <CSSTransitionGroup
           transitionName="component"
           transitionAppear
-          transitionAppearTimeout={300}
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
+          transitionEnter
+          transitionAppearTimeout={700}
+          transitionEnterTimeout={500}
+          transitionLeave={false}
         >
-          {component}
+          {this.state.phase === consts.PHASE_ACTIVITY &&
+            <ChooseActivity
+              handleActivity={this.handleActivity} 
+            />
+          }
+          {this.state.phase === consts.PHASE_LEVEL &&
+            <ChooseLevel 
+              handleLevel={this.handleLevel} 
+              activity={this.getActivityName()} 
+            />
+          }
+          {this.state.phase === consts.PHASE_START &&
+            <Start 
+              word={this.state.word}
+              startTimer={this.startTimer} 
+              resetGame={this.resetGame} 
+              handleTouch={this.handleTouch}
+              touched={this.state.touched}
+              timer={this.state.timer} 
+              activity={this.getActivityName()}
+              activityText={this.getActivityText()}
+            />
+          }
         </CSSTransitionGroup>
         <audio src={beep} />
         <audio src={finish} />

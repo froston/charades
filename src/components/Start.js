@@ -10,15 +10,25 @@ const Start = (props) => {
     }
   }
   const handleReset = () => {
-    if(props.timer === 0) {
-      props.resetGame()
-    }
+    props.resetGame()
+  }
+  const handleTouchStart = () => {
+    props.handleTouch('start')
+  }
+  const handleTouchEnd = () => {
+    props.handleTouch('end')
   }
   return (
     <div className={(props.timer ? " fase start counting " : "fase start ") + props.activity}>
       <br />
       <h2>{props.activityText}:</h2>
-      <h1>{props.word}</h1>
+      <h1 
+        onTouchStart={handleTouchStart} 
+        onTouchEnd={handleTouchEnd} 
+        className={props.touched ? '' : 'blured'}
+      >
+        {props.word}
+      </h1>
       <br />
       {props.timer ? 
         <span>{props.timer}</span>
@@ -27,7 +37,11 @@ const Start = (props) => {
         props.timer === 0 ?
           <button onClick={handleReset} >{lang.resetButton}</button>
         :
-          <button onClick={handleStart} >{lang.startButton}</button>
+          <div>
+            <button onClick={handleStart} >{lang.startButton}</button>
+            <br />
+            <button className="return" onClick={handleReset} >{lang.returnButton}</button>
+          </div>
       }
     </div>
   )
@@ -36,8 +50,10 @@ const Start = (props) => {
 Start.propTypes = {
   startTimer: PropTypes.func.isRequired,
   resetGame: PropTypes.func.isRequired,
+  handleTouch: PropTypes.func.isRequired,
   activity: PropTypes.string.isRequired,
   activityText: PropTypes.string.isRequired,
+  touched: PropTypes.bool.isRequired,
   timer: PropTypes.number
 }
 

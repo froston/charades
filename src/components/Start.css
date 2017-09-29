@@ -1,6 +1,15 @@
 .fase.start h1 {
   font-size: 50px;
   text-transform: uppercase;
+  transition: all .5s;
+}
+.fase.start.counting h1.blured {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.fase.start.counting h1.blured:hover {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
 }
 
 .fase.start h2 {
@@ -9,10 +18,10 @@
 
 .fase.start button {
   width: 80%;
-  min-height: 120px;
+  min-height: 100px;
   color: #fff;
-  font-size: 50px;
-  border-radius: 20px;
+  font-size: 30px;
+  border-radius: 10px;
 }
 
 .fase.start.speaking.counting,
@@ -21,19 +30,35 @@
   color: #fff;
   transition: all .5s;
 }
-
 .fase.start.drawing.counting,
 .fase.start.drawing button {
   background-color: #1dc95c;
   color: #fff;
   transition: all .5s;
 }
-
 .fase.start.pantomima.counting,
 .fase.start.pantomima button {
   background-color: #c91d40;
   color: #fff;
   transition: all .5s;
+}
+
+.fase.start button.return {
+  background-color: #fff;
+  transition: all .5s;
+  margin-top: 15px;
+}
+.fase.start.speaking button.return {
+  color: #5d1ec9;
+  border: 1px solid #5d1ec9;
+}
+.fase.start.drawing button.return {
+  color: #1dc95c;
+  border: 1px solid #1dc95c;
+}
+.fase.start.pantomima button.return {
+  color: #c91d40;
+  border: 1px solid #c91d40;
 }
 
 .fase.start span {

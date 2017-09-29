@@ -7,7 +7,7 @@ const lang = {
   difficult: 'Difícil',
   startButton: 'Empezar',
   resetButton: 'Reiniciar',
-  nextButton: 'Otra Palabra'
+  returnButton: 'Volver'
 }
 
 export default lang
