@@ -2,7 +2,10 @@
   height: 100vh;
   min-height: 100%;
   text-align: center;
-  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none;          
 }
 
 button {
