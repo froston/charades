@@ -2,6 +2,10 @@
   font-size: 50px;
   text-transform: uppercase;
   transition: all .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none; 
 }
 .fase.start.counting h1.blured {
   -webkit-filter: blur(10px);
