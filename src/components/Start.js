@@ -12,20 +12,17 @@ const Start = (props) => {
   const handleReset = () => {
     props.resetGame()
   }
-  const handleTouchStart = () => {
-    props.handleTouch('start')
-  }
-  const handleTouchEnd = () => {
-    props.handleTouch('end')
+  const handleBlur = (pos) => {
+    props.handleBlur(pos)
   }
   return (
     <div className={(props.timer ? " fase start counting " : "fase start ") + props.activity}>
       <br />
       <h2>{props.activityText}:</h2>
       <h1 
-        onTouchStart={handleTouchStart} 
-        onTouchEnd={handleTouchEnd} 
-        className={props.touched ? '' : 'blured'}
+        onMouseDown={() => handleBlur( 'down')}
+        onMouseUp={() => handleBlur( 'up')}
+        className={props.blurred ? '' : 'blurred'}
       >
         {props.word}
       </h1>
@@ -50,10 +47,10 @@ const Start = (props) => {
 Start.propTypes = {
   startTimer: PropTypes.func.isRequired,
   resetGame: PropTypes.func.isRequired,
-  handleTouch: PropTypes.func.isRequired,
+  handleBlur: PropTypes.func.isRequired,
   activity: PropTypes.string.isRequired,
   activityText: PropTypes.string.isRequired,
-  touched: PropTypes.bool.isRequired,
+  blurred: PropTypes.bool.isRequired,
   timer: PropTypes.number
 }
 

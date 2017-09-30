@@ -22,7 +22,7 @@ class App extends React.Component {
       timer: null,
       word: null,
       usedWords: [],
-      touched: false
+      blurred: false
     }
   }
 
@@ -96,8 +96,8 @@ class App extends React.Component {
     })
   }
 
-  handleTouch = (moment) => {
-    this.setState({ touched: moment == 'start' ? true : false })
+  handleBlur = (pos) => {
+    this.setState({ blurred: pos == 'down' ? true : false })
   }
 
   getActivityText = () => {
@@ -173,8 +173,8 @@ class App extends React.Component {
               word={this.state.word}
               startTimer={this.startTimer} 
               resetGame={this.resetGame} 
-              handleTouch={this.handleTouch}
-              touched={this.state.touched}
+              handleBlur={this.handleBlur}
+              blurred={this.state.blurred}
               timer={this.state.timer} 
               activity={this.getActivityName()}
               activityText={this.getActivityText()}
