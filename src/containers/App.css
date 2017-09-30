@@ -36,16 +36,16 @@ button:hover {
 }
 
 .component-enter {
-  -ms-transform: translateX(500px);
-  -webkit-transform: translateX(500px);
-  transform: translateX(500px);
+  -ms-transform: translateX(300px);
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
 }
 
 .component-enter.component-enter-active {
   -ms-transform: translateX(0px);
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
-  transition: all .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all .3s linear;
 }
 
 

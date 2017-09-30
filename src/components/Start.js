@@ -12,7 +12,11 @@ const Start = (props) => {
   const handleReset = () => {
     props.resetGame()
   }
-  const handleBlur = (pos) => {
+  const handleTouch = (event, pos) => {
+    event.preventDefault()
+    props.handleBlur(pos)
+  }
+  const handleMouse = (pos) => {
     props.handleBlur(pos)
   }
   return (
@@ -20,8 +24,10 @@ const Start = (props) => {
       <br />
       <h2>{props.activityText}:</h2>
       <h1 
-        onMouseDown={() => handleBlur( 'down')}
-        onMouseUp={() => handleBlur( 'up')}
+        onTouchStart={(event) => handleTouch(event, 'down')}
+        onTouchEnd={(event) => handleTouch(event, 'up')}
+        onMouseDown={() => handleMouse( 'down')}
+        onMouseUp={() => handleMouse( 'up')}
         className={props.blurred ? '' : 'blurred'}
       >
         {props.word}

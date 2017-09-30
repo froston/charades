@@ -154,7 +154,7 @@ class App extends React.Component {
           transitionAppear
           transitionEnter
           transitionAppearTimeout={700}
-          transitionEnterTimeout={500}
+          transitionEnterTimeout={300}
           transitionLeave={false}
         >
           {this.state.phase === consts.PHASE_ACTIVITY &&
