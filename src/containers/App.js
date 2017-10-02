@@ -1,5 +1,4 @@
 import React from 'react'
-import JSONPath from 'jsonpath-plus'
 import { CSSTransitionGroup } from 'react-transition-group'
 import { 
   ChooseActivity, 
