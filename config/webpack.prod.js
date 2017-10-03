@@ -1,14 +1,11 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-const InterpolateHtmlPlugin = require('interpolate-html-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const buildDir = path.resolve(__dirname, '../build');
 const appDir = path.resolve(__dirname, '../src');
-const publicPath = '';
-const publicUrl = publicPath.slice(0, -1);
 
 const config = {
   context: path.resolve(__dirname, '..'),
@@ -18,14 +15,11 @@ const config = {
   output: {
     filename: 'bundle.js',
     path: buildDir,
-    publicPath: publicPath,
   },
   plugins: [
-    new InterpolateHtmlPlugin({'PUBLIC_URL': ''}),    
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-        PUBLIC_URL: JSON.stringify('')
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -44,10 +38,6 @@ const config = {
       title: 'Charades',
       filename: 'index.html',
       template: 'public/index.html',
-      favicon: 'public/favicon.ico'
-    }),
-    new ManifestPlugin({
-      fileName: 'asset-manifest.json',
     }),
     new SWPrecacheWebpackPlugin({
       dontCacheBustUrlsMatching: /\.\w{8}\./,
@@ -56,10 +46,20 @@ const config = {
         console.log(message);
       },
       minify: false,
-      navigateFallback: publicUrl + '/index.html',
+      navigateFallback: '/index.html',
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
+    new CopyWebpackPlugin([{ 
+        from: 'public', 
+        to: buildDir
+      }],
+      {
+        ignore: [
+          'index.html'
+        ]
+      }
+    )
   ],
   module: {
     rules: [
