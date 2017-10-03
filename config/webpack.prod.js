@@ -46,9 +46,8 @@ const config = {
         console.log(message);
       },
       minify: false,
-      navigateFallback: '/index.html',
+      navigateFallback: 'index.html',
       navigateFallbackWhitelist: [/^(?!\/__).*/],
-      staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
     new CopyWebpackPlugin([{ 
         from: 'public', 
