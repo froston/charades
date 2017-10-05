@@ -8,6 +8,7 @@
   user-select: none;     
   display: flex;   
   flex-direction: column;
+  overflow: auto;
 }
 
 button {
