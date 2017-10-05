@@ -11,21 +11,21 @@ const ChooseActivity = (props) => (
       id="speaking" 
       onClick={() => props.handleActivity(consts.ACTIVITY_SPEAKING)}
     >
-      <img src={microphone} alt={lang.speaking} style={{ width: 50 }} />
+      <img src={microphone} alt={lang.speaking} style={{ width: 50, height: 50 }} />
       <span>{lang.speaking}</span>
     </button>
     <button 
       id="drawing" 
       onClick={() => props.handleActivity(consts.ACTIVITY_DRAWING)}
     >
-      <img src={draw} alt={lang.drawing} style={{ width: 50 }} />
+      <img src={draw} alt={lang.drawing} style={{ width: 50, height: 50 }} />
       <span>{lang.drawing}</span>
     </button>
     <button 
       id="pantomima" 
       onClick={() => props.handleActivity(consts.ACTIVITY_PANTOMIMA)}
     >
-      <img src={theatre} alt={lang.pantomima} style={{ width: 50 }} />
+      <img src={theatre} alt={lang.pantomima} style={{ width: 50, height: 50 }} />
       <span>{lang.pantomima}</span>
     </button>
   </div>
