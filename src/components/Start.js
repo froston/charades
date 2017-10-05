@@ -36,9 +36,11 @@ const Start = (props) => {
       {props.timer ? 
         <span>{props.timer}</span>
         :
-        // Reset or Start button
+        // Reset or Start button (div for centering)
         props.timer === 0 ?
-          <button onClick={handleReset} >{lang.resetButton}</button>
+          <div>
+            <button onClick={handleReset} >{lang.resetButton}</button>
+          </div>
         :
           <div>
             <button onClick={handleStart} >{lang.startButton}</button>

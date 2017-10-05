@@ -8,8 +8,11 @@
   user-select: none;
 }
 .fase.start.counting h1.blurred {
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
 }
 
 .fase.start h2 {
@@ -18,10 +21,11 @@
 
 .fase.start button {
   width: 80%;
-  min-height: 100px;
+  height: 100px;
   color: #fff;
   font-size: 30px;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .fase.start.speaking.counting,

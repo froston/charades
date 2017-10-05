@@ -16,6 +16,7 @@
   "author": "Pavel Muller",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-array-includes": "^2.0.3",
     "gh-pages": "^1.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
