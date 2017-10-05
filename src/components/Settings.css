@@ -1,0 +1,58 @@
+.modaloverlay {
+  background: rgba(0,0,0,0.8);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity .5s ease-in;
+  -moz-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+  z-index: -1;
+  display: none;
+  user-select: none;
+  cursor: default;
+}
+.modaloverlay.show {
+  display: block;
+  opacity: 0.9;
+  pointer-events: auto;
+  z-index:99999;
+}
+
+.modal {
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 3em;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0px;
+}
+
+.close {
+  background-color: #c91d40;
+  color: #fff;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  z-index: 1;
+}
+
+@media (min-width: 60em) {
+  .modal {
+    height: 75%;
+    margin: 5% auto;
+    max-height: 57em;
+    max-width: 66em;
+    width: 85%;
+    border-radius: 5px;
+  }
+}

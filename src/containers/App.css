@@ -21,6 +21,16 @@ button {
   cursor: pointer;
 }
 
+#settings {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+
 button:hover {
   opacity: 0.9;
 }

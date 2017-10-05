@@ -3,7 +3,8 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import { 
   ChooseActivity, 
   ChooseLevel, 
-  Start
+  Start,
+  Settings
 } from '../components'
 import * as consts from '../const'
 import { beep, finish } from '../sounds'
@@ -21,7 +22,8 @@ class App extends React.Component {
       timer: null,
       word: null,
       usedWords: [],
-      blurred: false
+      blurred: false,
+      showModal: false
     }
   }
 
@@ -145,9 +147,20 @@ class App extends React.Component {
     }
   }
 
+  showModal = (showModal) => {
+    this.setState({ showModal })
+  }
+
   render() {
     return (
       <div>
+        <a 
+          id="settings" 
+          onClick={() => this.showModal(true)} 
+          title={lang.settings.settings}
+        >
+          &#9881;
+        </a>
         <CSSTransitionGroup
           transitionName="component"
           transitionAppear
@@ -180,6 +193,7 @@ class App extends React.Component {
             />
           }
         </CSSTransitionGroup>
+        <Settings show={this.state.showModal} closeModal={() => this.showModal(false)}/>
         <audio src={beep} />
         <audio src={finish} />
       </div>

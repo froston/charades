@@ -7,7 +7,14 @@ const lang = {
   difficult: 'Difficult',
   startButton: 'Start',
   resetButton: 'Restart',
-  nextButton: 'Another Word'
+  nextButton: 'Another Word',
+  settings: {
+    settings: 'Settings',
+    lang: 'Language',
+    chooseLang: 'Choose Language',
+    rules: 'Rules',
+    author: 'Author'
+  }
 }
 
 export default lang
