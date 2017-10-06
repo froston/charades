@@ -3,24 +3,46 @@ import PropTypes from 'prop-types'
 import lang from '../lang'
 import './Settings.css'
 
-const Settings = (props) => 
-<div className={props.show ? "settings show" : "settings"}  >
-  <div className="modal" tabIndex="0" autoFocus onKeyDown={() => console.log(123)} onFocus={() => console.log('FOCUS IS ON BIG RED DIV')}>
-    <button className="close" onClick={props.closeModal}>&#10005;</button>
-    <div>
-      <h2>{lang[props.loc].settings.settings}</h2>
-      <h3>{lang[props.loc].settings.lang}:</h3>
-      <select onChange={(event) => props.setLanguage(event.target.value)} value={props.loc}>
-        <option value="es">{lang[props.loc].settings.es}</option>
-        <option value="en">{lang[props.loc].settings.en}</option>
-      </select>
-      <h3>{lang[props.loc].settings.rules}:</h3>
-      <p>...</p>
-      <h3>{lang[props.loc].settings.author}:</h3>
-      <p>Pavel Müller</p>
-    </div>
-  </div>
-</div>
+class Settings extends React.Component {
+  componentWillMount() {
+    document.addEventListener("keydown", this.onKeyDown);
+  }
+  componentWillUnmount() {
+      document.removeEventListener("keydown", this.onKeyDown);
+  }
+  onKeyDown = (event) => {
+    // close on escape
+    if (event.keyCode === 27) {
+      if (this.props.show === true) {
+        this.props.closeModal(true)
+      }
+    }
+  }      
+  render() {
+    return (
+      <div className={this.props.show ? "settings show" : "settings"}  >
+        <div className="modal">
+          <button className="close" onClick={this.props.closeModal}>&#10005;</button>
+          <div>
+            <h2><span>&#9881;</span>{lang[this.props.loc].settings.settings}</h2>
+            <h3>{lang[this.props.loc].settings.lang}:</h3>
+            <select onChange={(event) => this.props.setLanguage(event.target.value)} value={this.props.loc}>
+              <option value="es">{lang[this.props.loc].settings.es}</option>
+              <option value="en">{lang[this.props.loc].settings.en}</option>
+            </select>
+            <h3>{lang[this.props.loc].settings.rules}:</h3>
+            <p>...</p>
+            <h3>{lang[this.props.loc].settings.author}:</h3>
+            <a href="https://plus.google.com/+pavelmüller1" title="Google+">
+              Pavel Müller
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
 
 Settings.propTypes = {
   show: PropTypes.bool.isRequired,

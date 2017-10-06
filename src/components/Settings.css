@@ -15,6 +15,12 @@
   user-select: none;
   cursor: default;
 }
+
+.settings h2,
+.settings h3 {
+  text-transform: uppercase;
+}
+
 .settings.show {
   display: block;
   opacity: 0.9;
@@ -46,6 +52,15 @@
   z-index: 1;
 }
 
+.settings select {
+  height: 34px;
+  background-image: none;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
 @media (min-width: 60em) {
   .settings .modal {
     height: 65%;
@@ -55,13 +70,7 @@
     width: 85%;
     border-radius: 5px;
   }
-}
-
-.settings select {
-  height: 34px;
-  background-image: none;
-  width: 250px;
-  padding: 6px 12px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  .settings select {
+    width: 250px;
+  }
 }
