@@ -24,7 +24,7 @@ class App extends React.Component {
       usedWords: [],
       blurred: false,
       showModal: false,
-      loc: 'es'
+      loc: this.getCurrentLanguage()
     }
   }
 
@@ -129,7 +129,32 @@ class App extends React.Component {
     }
   }
 
+  getLangName = (lang) => {
+    if (lang && typeof lang === "string") {
+      const short = lang.substring(0,2)
+      if (short === "en" || short === "es" ) {
+        return short
+      }
+    }
+    return false
+  }
+
+  getCurrentLanguage = () => {
+    const setLang = localStorage.getItem("charades_lang")
+    const navLang = this.getLangName(navigator.language)
+    const defaultLang = "en"
+
+    if (setLang && setLang.length == 2) {
+      return setLang
+    } else if (navLang) {
+      return navLang
+    } else {
+      return defaultLang
+    }
+  }
+
   setLanguage = (language) => {
+    localStorage.setItem("charades_lang", language)
     this.setState({ loc: language })
   }
 

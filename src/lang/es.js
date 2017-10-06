@@ -14,7 +14,9 @@ const lang = {
     lang: 'Idioma',
     chooseLang: 'Elegir Idioma',
     rules: 'Reglas',
-    author: 'Autor'
+    author: 'Autor',
+    en: "inglés",
+    es: "español"
   }
 }
 

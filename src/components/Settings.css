@@ -1,4 +1,4 @@
-.modaloverlay {
+.settings {
   background: rgba(0,0,0,0.8);
   bottom: 0;
   left: 0;
@@ -15,14 +15,14 @@
   user-select: none;
   cursor: default;
 }
-.modaloverlay.show {
+.settings.show {
   display: block;
   opacity: 0.9;
   pointer-events: auto;
   z-index:99999;
 }
 
-.modal {
+.settings .modal {
   background-color: #fff;
   height: 100%;
   position: relative;
@@ -33,7 +33,7 @@
   border-radius: 0px;
 }
 
-.close {
+.settings .close {
   background-color: #c91d40;
   color: #fff;
   font-size: 24px;
@@ -47,8 +47,8 @@
 }
 
 @media (min-width: 60em) {
-  .modal {
-    height: 75%;
+  .settings .modal {
+    height: 65%;
     margin: 5% auto;
     max-height: 57em;
     max-width: 66em;
@@ -57,8 +57,11 @@
   }
 }
 
-select {
+.settings select {
+  height: 34px;
+  background-image: none;
   width: 250px;
-  padding: 10px;
-  border-radius: 3px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }

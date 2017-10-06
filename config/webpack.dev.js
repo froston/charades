@@ -51,7 +51,8 @@ const config = {
     historyApiFallback: true,
     contentBase: buildDir,
     port: 3001,
-    open: true
+    open: true,
+    hot: true
   },
   performance: {
     hints: false,
