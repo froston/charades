@@ -23,7 +23,8 @@ class App extends React.Component {
       word: null,
       usedWords: [],
       blurred: false,
-      showModal: false
+      showModal: false,
+      loc: 'es'
     }
   }
 
@@ -102,15 +103,16 @@ class App extends React.Component {
   }
 
   getActivityText = () => {
+    const { loc } = this.state;
     switch (this.state.activity) {
       case consts.ACTIVITY_SPEAKING:
-        return lang.speaking
+        return lang[loc].speaking
       case consts.ACTIVITY_DRAWING:
-        return lang.drawing
+        return lang[loc].drawing
       case consts.ACTIVITY_PANTOMIMA:
-        return lang.pantomima
+        return lang[loc].pantomima
       default:
-        return lang.speaking
+        return lang[loc].speaking
     }
   } 
   
@@ -127,8 +129,12 @@ class App extends React.Component {
     }
   }
 
+  setLanguage = (language) => {
+    this.setState({ loc: language })
+  }
+
   getWord = () => {
-    const allWords = words
+    const allWords = words[this.state.loc]
     const filtered = allWords.filter((word) => {
       // choose a word fitting activity, level and must not be used yet
       return word[this.getActivityName()] === this.state.level && 
@@ -157,7 +163,7 @@ class App extends React.Component {
         <a 
           id="settings" 
           onClick={() => this.showModal(true)} 
-          title={lang.settings.settings}
+          title={lang[this.state.loc].settings.settings}
         >
           &#9881;
         </a>
@@ -172,12 +178,14 @@ class App extends React.Component {
           {this.state.phase === consts.PHASE_ACTIVITY &&
             <ChooseActivity
               handleActivity={this.handleActivity} 
+              loc={this.state.loc}
             />
           }
           {this.state.phase === consts.PHASE_LEVEL &&
             <ChooseLevel 
               handleLevel={this.handleLevel} 
-              activity={this.getActivityName()} 
+              activity={this.getActivityName()}
+              loc={this.state.loc} 
             />
           }
           {this.state.phase === consts.PHASE_START &&
@@ -190,10 +198,16 @@ class App extends React.Component {
               timer={this.state.timer} 
               activity={this.getActivityName()}
               activityText={this.getActivityText()}
+              loc={this.state.loc}
             />
           }
         </CSSTransitionGroup>
-        <Settings show={this.state.showModal} closeModal={() => this.showModal(false)}/>
+        <Settings 
+          show={this.state.showModal} 
+          loc={this.state.loc}
+          setLanguage={this.setLanguage} 
+          closeModal={() => this.showModal(false)} 
+        />
         <audio src={beep} />
         <audio src={finish} />
       </div>

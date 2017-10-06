@@ -39,13 +39,13 @@ const Start = (props) => {
         // Reset or Start button (div for centering)
         props.timer === 0 ?
           <div>
-            <button onClick={handleReset} >{lang.resetButton}</button>
+            <button onClick={handleReset} >{lang[props.loc].resetButton}</button>
           </div>
         :
           <div>
-            <button onClick={handleStart} >{lang.startButton}</button>
+            <button onClick={handleStart} >{lang[props.loc].startButton}</button>
             <br />
-            <button className="return" onClick={handleReset} >{lang.returnButton}</button>
+            <button className="return" onClick={handleReset} >{lang[props.loc].returnButton}</button>
           </div>
       }
     </div>
@@ -59,6 +59,7 @@ Start.propTypes = {
   activity: PropTypes.string.isRequired,
   activityText: PropTypes.string.isRequired,
   blurred: PropTypes.bool.isRequired,
+  loc: PropTypes.string.isRequired,
   timer: PropTypes.number
 }
 

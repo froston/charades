@@ -10,26 +10,27 @@ const ChooseLevel = (props) => (
       id="easy" 
       onClick={() => props.handleLevel(consts.LEVEL_EASY)}
     >
-      {lang.easy}
+      {lang[props.loc].easy}
     </button>
     <button 
       id="intermediate" 
       onClick={() => props.handleLevel(consts.LEVEL_INTERMEDIATE)}
     >
-      {lang.intermediate}
+      {lang[props.loc].intermediate}
     </button>
     <button 
       id="difficult" 
       onClick={() => props.handleLevel(consts.LEVEL_DIFFICULT)}
     >
-      {lang.difficult}
+      {lang[props.loc].difficult}
     </button>
   </div>
 )
 
 ChooseLevel.propTypes = {
   activity: PropTypes.string.isRequired,
-  handleLevel: PropTypes.func.isRequired
+  handleLevel: PropTypes.func.isRequired,
+  loc: PropTypes.string.isRequired
 }
 
 export default ChooseLevel

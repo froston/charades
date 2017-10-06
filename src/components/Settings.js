@@ -9,8 +9,11 @@ const Settings = (props) =>
     <button className="close" onClick={props.closeModal}>&#10005;</button>
     <div>
       <h2>{lang.settings.settings}</h2>
-      {/* <h3>{lang.settings.lang}:</h3>
-      <p>Español</p> */}
+      <h3>{lang.settings.lang}:</h3>
+      <select onChange={(event) => props.setLanguage(event.target.value)} value={props.loc}>
+        <option value="es">Español</option>
+        <option value="en">Ingles</option>
+      </select>
       <h3>{lang.settings.rules}:</h3>
       <p>...</p>
       <h3>{lang.settings.author}:</h3>
@@ -21,7 +24,9 @@ const Settings = (props) =>
 
 Settings.propTypes = {
   show: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func.isRequired
+  closeModal: PropTypes.func.isRequired,
+  setLanguage: PropTypes.func.isRequired,
+  loc: PropTypes.string.isRequired
 }
 
 export default Settings

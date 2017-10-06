@@ -8,6 +8,7 @@ const lang = {
   startButton: 'Start',
   resetButton: 'Restart',
   nextButton: 'Another Word',
+  returnButton: 'Return',
   settings: {
     settings: 'Settings',
     lang: 'Language',
