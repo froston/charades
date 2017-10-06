@@ -355,7 +355,7 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Viuda Pobre",
+    "value": "La Viuda Pobre",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -511,13 +511,13 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Biblia",
+    "value": "Bíblia",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Espiritu Santo",
+    "value": "Espíritu Santo",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -529,7 +529,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Estatua de sueño Nabucadnazar",
+    "value": "Estatua del Sueño de Nabucadnazar",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -559,19 +559,19 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Arbol de Conocimiento",
+    "value": "Árbol de Conocimiento",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Arbol de la Vida",
+    "value": "Árbol de la Vida",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "El Santisimo",
+    "value": "El Santísimo",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -583,7 +583,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Mana",
+    "value": "Maná",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -625,7 +625,7 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Los jinetes",
+    "value": "Los 4 Jinetes",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -661,7 +661,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Jerusalen",
+    "value": "Jerusalén",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -709,19 +709,19 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Falsa Religion",
+    "value": "Falsa Religión",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Paraiso",
+    "value": "Paraíso",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Esclavo fiel y discreto",
+    "value": "Esclavo Fiel y Discreto",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -733,7 +733,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Ancianos",
+    "value": "Anciano",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -751,7 +751,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Otra oveja",
+    "value": "Otra Oveja",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -769,7 +769,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Precursor regular",
+    "value": "Precursor Regular",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
@@ -781,7 +781,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Precuraor auxiliar",
+    "value": "Precuraor Auxiliar",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
@@ -799,31 +799,31 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Jovenes Preguntan",
+    "value": "Jóvenes Preguntan",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Predicacion casa de casa",
+    "value": "Predicación Casa de Casa",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Predicacion publica",
+    "value": "Predicación Pública",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Predicacion informal",
+    "value": "Predicación Informal",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Estudio Biblico",
+    "value": "Estudio Bíblico",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -841,7 +841,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Resurecion",
+    "value": "Resureción",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -859,7 +859,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Congregacion",
+    "value": "Congregación",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -907,7 +907,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Meditacion",
+    "value": "Meditación",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -919,7 +919,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Gran Tribulacion",
+    "value": "Gran Tribulación",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -931,7 +931,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Reunion",
+    "value": "Reunión",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -943,7 +943,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Familia",
+    "value": "Família",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -955,13 +955,13 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Discurso Publico",
+    "value": "Discurso Público",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Escuela Teocratica",
+    "value": "Escuela Teocrática",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -973,13 +973,13 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Oracion",
+    "value": "Oración",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Jardin de Eden",
+    "value": "Jardín de Eden",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -997,13 +997,13 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Espiritu",
+    "value": "Espíritu",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Vision",
+    "value": "Visión",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -1015,19 +1015,19 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Espiritu del Mundo",
+    "value": "Espíritu del Mundo",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Fruto del Espiritu",
+    "value": "Fruto del Espíritu",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Fruto de la carne",
+    "value": "Fruto de la Carne",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
@@ -1051,13 +1051,13 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Armagedon",
+    "value": "Armagedón",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Rio Jordan",
+    "value": "Rio Jordán",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
@@ -1081,7 +1081,7 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Canan",
+    "value": "Canaán",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
@@ -1117,7 +1117,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Conmemoracion",
+    "value": "Conmemoración",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -1291,7 +1291,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Sabiduria",
+    "value": "Sabiduría",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
@@ -1303,7 +1303,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Valentia",
+    "value": "Valentía",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
@@ -1339,7 +1339,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Devocion Piadosa",
+    "value": "Devoción Piadosa",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 3
@@ -1363,7 +1363,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Sumision",
+    "value": "Sumisión",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -1399,7 +1399,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Ambicion",
+    "value": "Ambición",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -1411,7 +1411,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Cobardia",
+    "value": "Cobardía",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
