@@ -637,19 +637,13 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Hilo Azul",
-    "pantomima": 3,
-    "drawing": 3,
-    "speaking": 3
-  },
-  {
     "value": "Nazareo",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Hilo Rojo",
+    "value": "Cordón Escarlata",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -685,13 +679,13 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Vestido de José",
+    "value": "Prenda de Vestir de José",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Lepra",
+    "value": "Leper",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -1153,7 +1147,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Urim y Turim",
+    "value": "Urim y Tumim",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3

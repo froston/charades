@@ -1,37 +1,37 @@
 const words = 
 [
   {
-    "value": "Jehová",
+    "value": "Jehovah",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Jesús",
+    "value": "Jesus",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Satanás",
+    "value": "Satan",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Manasés",
+    "value": "Manasseh",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Adán",
+    "value": "Adan",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Eva",
+    "value": "Eve",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -43,37 +43,37 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Rey Saúl",
+    "value": "King Saul",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Ana",
+    "value": "Hannah",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Profeta Ana",
+    "value": "Anna the Prophet",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Manóah",
+    "value": "Manoah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Gedeón",
+    "value": "Gideon",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Noemí",
+    "value": "Naomi",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -85,31 +85,31 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Coré",
+    "value": "Corah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Ziporá",
+    "value": "Zipporah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "El faraón",
+    "value": "Pharaoh",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Aarón",
+    "value": "Aaron",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Míriam",
+    "value": "Miriam",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
@@ -127,7 +127,7 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Rubén",
+    "value": "Reuben",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
@@ -139,31 +139,31 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Esaú",
+    "value": "Esau",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Jonatán",
+    "value": "Jonathan",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Sansón",
+    "value": "Samson",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "María",
+    "value": "Mary",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Ezequías",
+    "value": "Hezekiah",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -175,31 +175,31 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Timoteo",
+    "value": "Timothy",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Isaías",
+    "value": "Isaiah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Pedro",
+    "value": "Peter",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "José",
+    "value": "Joseph",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Jeremías",
+    "value": "Jeremiah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -211,43 +211,43 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Jonás",
+    "value": "Jonah",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Noé",
+    "value": "Noe",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Pablo",
+    "value": "Paul",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Nehemías",
+    "value": "Nehemiah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Salomón",
+    "value": "Solomon",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Josías",
+    "value": "Josiah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Moisés",
+    "value": "Moises",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -265,19 +265,19 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Ester",
+    "value": "Esther",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Abrahán",
+    "value": "Abraham",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Josué",
+    "value": "Joshua",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -289,13 +289,13 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Sadrak",
+    "value": "Shadrach",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Mesac",
+    "value": "Meshach",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
@@ -307,91 +307,91 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Gog de Magog",
+    "value": "Gog of Magog",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Ángel Gabriel",
+    "value": "Angel Gabriel",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Ángel Miguel",
+    "value": "Angel Michael",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Caín",
+    "value": "Cain",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Mesías",
+    "value": "The Messiah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Levita",
+    "value": "Levite",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Pagano",
+    "value": "Pagan",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Sumo Sacerdote",
+    "value": "Hight Priest",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Viuda Pobre",
+    "value": "The Poor Widow",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Fariseo",
+    "value": "Pharisee",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Saduceo",
+    "value": "Sadducee",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Reina Jezabel",
+    "value": "Jezebel",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Sulamita",
+    "value": "Shulamite Girl",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Pastor de Sulamita",
+    "value": "Shulammite's Shepherd",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Pilato",
+    "value": "Pilate",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 2
@@ -403,31 +403,31 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Juan",
+    "value": "John",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Santiago",
+    "value": "James",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Lucas",
+    "value": "Luke",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Mateo",
+    "value": "Matthew",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Marcos",
+    "value": "Mark",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -445,37 +445,37 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Sem",
+    "value": "Shem",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Cán",
+    "value": "Ham",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Jafet",
+    "value": "Japhet",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Reina de Los Cielos",
+    "value": "Queen of Heavens",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Kandake",
+    "value": "Candace",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Raquel",
+    "value": "Rachel",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -487,145 +487,145 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Oholá",
+    "value": "Oholah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Oholibá",
+    "value": "Oholibah",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Pasjur",
+    "value": "Pashur",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Rabsaqué",
+    "value": "Rabshakeh",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Biblia",
+    "value": "The Bible",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Espiritu Santo",
+    "value": "Holy Spirit",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Palo de Aron",
+    "value": "Aaron's Rod",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Estatua de sueño Nabucadnazar",
+    "value": "Nebuchadnezzar Dream's Statue",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "70 semanas",
+    "value": "70 weeks",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "69 semanas",
+    "value": "69 weeks",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Templo",
+    "value": "Temple",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Arca",
+    "value": "Noah's Arc",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Arbol de Conocimiento",
+    "value": "Tree of Knowledge",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Arbol de la Vida",
+    "value": "Tree of Life",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "El Santisimo",
+    "value": "Most Holy",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Soberanía De Jehová",
+    "value": "Jehovah's Sovereignty",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Mana",
+    "value": "Manna",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Arcoidis",
+    "value": "Rainbow",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Sacrificio Animal",
+    "value": "Animal Sacrifice",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Holocausto",
+    "value": "Burnt Offering",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Carro de Jehová",
+    "value": "Jehovah's Chariot",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Bestia Salvaje",
+    "value": "Wild Beast",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Bestia Escalata",
+    "value": "Scarlet Beast",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Los jinetes",
+    "value": "The 4 Horsemen",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
@@ -637,367 +637,361 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Hilo Azul",
-    "pantomima": 3,
-    "drawing": 3,
-    "speaking": 3
-  },
-  {
-    "value": "Nazareo",
+    "value": "Nazarite",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Hilo Rojo",
+    "value": "Scarlet Cord",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Vino",
+    "value": "Wine",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Jerusalen",
+    "value": "Jerusalem",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Monte Sión",
+    "value": "Mount Zion",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Pascua",
+    "value": "Passover",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Monte de Olivos",
+    "value": "Mount of Olives",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Vestido de José",
+    "value": "Joseph's Special Robe",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Lepra",
+    "value": "Leprosy",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Betel",
+    "value": "Bethel",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Torre de Babel",
+    "value": "Tower of Babel",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Falsa Religion",
+    "value": "False Religion",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Paraiso",
+    "value": "Paradise",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Esclavo fiel y discreto",
+    "value": "Descreet and Faithful Slave",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Cuerpo Gobernante",
+    "value": "Govering Body",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Ancianos",
+    "value": "Elder",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Siervo Ministerial",
+    "value": "Ministrial Servant",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Ungido",
+    "value": "Anointed",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Otra oveja",
+    "value": "Other Sheep",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Superintendente",
+    "value": "Traveling Overseer",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Misionero",
+    "value": "Missionary",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Precursor regular",
+    "value": "Regular Pioneer",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Precursor Especial",
+    "value": "Special Pioneer",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Precuraor auxiliar",
+    "value": "Auxillary Pioneer",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Razonamiento",
+    "value": "Reasoning",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Perspicacia",
+    "value": "Insight",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Jovenes Preguntan",
+    "value": "Young People Ask",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Predicacion casa de casa",
+    "value": "House to House Ministry",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Predicacion publica",
+    "value": "Public Ministry",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Predicacion informal",
+    "value": "Informal Ministry",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Estudio Biblico",
+    "value": "Bible Study",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Revisita",
+    "value": "Return Visit",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Milagro",
+    "value": "Miracle",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Resurecion",
+    "value": "Resurrection",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Pecado",
+    "value": "Sin",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Bautizmo",
+    "value": "Baptism",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Congregacion",
+    "value": "Congregation",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Ejercito de Jesus",
+    "value": "Jesus' Army",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Sodoma y Gomora",
+    "value": "Sodom and Gomorrah",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Idiomas",
+    "value": "Languages",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Vaso de Barro",
+    "value": "Earthenware Vessel",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Rollo",
+    "value": "Scroll",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 2
   },
   {
-    "value": "Escrituras Hebreas",
+    "value": "Hebrew Scriptures",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Escrituras Griegas",
+    "value": "Greek Scriptures",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Meditacion",
+    "value": "Meditation",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Texto Biblico",
+    "value": "Bible Text",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Gran Tribulacion",
-    "pantomima": 2,
-    "drawing": 2,
-    "speaking": 2
-  },
-  {
-    "value": "Asamblea",
-    "pantomima": 1,
-    "drawing": 1,
-    "speaking": 1
-  },
-  {
-    "value": "Reunion",
-    "pantomima": 1,
-    "drawing": 1,
-    "speaking": 1
-  },
-  {
-    "value": "Consuelo",
+    "value": "Great Tribulation",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Familia",
+    "value": "Convention",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Comentario",
+    "value": "Meeting",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Discurso Publico",
+    "value": "Comfort",
+    "pantomima": 2,
+    "drawing": 2,
+    "speaking": 2
+  },
+  {
+    "value": "Family",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Escuela Teocratica",
+    "value": "Comment",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Aeropago",
+    "value": "Public Talk",
+    "pantomima": 1,
+    "drawing": 1,
+    "speaking": 1
+  },
+  {
+    "value": "Theocratic School",
+    "pantomima": 1,
+    "drawing": 1,
+    "speaking": 1
+  },
+  {
+    "value": "Areopagus",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Oracion",
+    "value": "Prayer",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Jardin de Eden",
+    "value": "Garden of Eden",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "10 Mandamientos",
+    "value": "10 Commandments",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Alma",
+    "value": "Soul",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Espiritu",
+    "value": "Spirit",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
@@ -1009,91 +1003,91 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Reino de Dios",
+    "value": "God's Kingdom",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Espiritu del Mundo",
+    "value": "Spirit of World",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Fruto del Espiritu",
+    "value": "Fruitage of Spirit",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Fruto de la carne",
+    "value": "Works of Flesh",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Reino Norte de Israel",
+    "value": "Northern Kingdom",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Reino Sur de Judea",
+    "value": "Southern Kingdom",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Divorcio",
+    "value": "Divorce",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Armagedon",
+    "value": "Armageddon",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Rio Jordan",
+    "value": "River Jordan",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Becerro del Oro",
+    "value": "Golden Calf",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 2
   },
   {
-    "value": "Asirios",
+    "value": "Assyrians",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Caldeos",
+    "value": "Chaldeans",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Canan",
+    "value": "Canaan",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Egipcios",
+    "value": "Egyptians",
     "pantomima": 2,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Israelitas",
+    "value": "Israelites",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -1105,103 +1099,103 @@ const words =
     "speaking": 3
   },
   {
-    "value": "Olivo",
+    "value": "Olive Tree",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Cielo",
-    "pantomima": 2,
-    "drawing": 2,
-    "speaking": 1
-  },
-  {
-    "value": "Conmemoracion",
+    "value": "Heaven",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Hebreo",
+    "value": "Memorial",
+    "pantomima": 2,
+    "drawing": 2,
+    "speaking": 1
+  },
+  {
+    "value": "Hebrew",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Arameo",
+    "value": "Aramic",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Griego",
+    "value": "Greek",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Creación",
+    "value": "Creation",
     "pantomima": 2,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Rescate",
+    "value": "Ransom",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Urim y Turim",
+    "value": "Urim and Thummim",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Verdad",
+    "value": "Truth",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Nabuconodosor",
+    "value": "Nebuchadnezzar",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Apóstol",
+    "value": "Apostle",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Diluvio",
+    "value": "Flood",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Lázaro",
+    "value": "Lazarus",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Alabastro",
+    "value": "Alabaster",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Pomada Para Los Ojos",
+    "value": "Eyesalve",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Vid",
+    "value": "Vine",
     "pantomima": 3,
     "drawing": 1,
     "speaking": 2
@@ -1213,235 +1207,235 @@ const words =
     "speaking": 1
   },
   {
-    "value": "Tofet",
+    "value": "Topheth",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Costilla",
+    "value": "Rib",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Amor",
+    "value": "Love",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Gozo",
+    "value": "Joy",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Paz",
+    "value": "Peace",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Gran Paciencia",
+    "value": "Long-suffering",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 1
   },
   {
-    "value": "Bondad",
+    "value": "Kindness",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Beignidad",
+    "value": "Benignity",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 3
   },
   {
-    "value": "Fe",
+    "value": "Faith",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Apacibilidad",
+    "value": "Mildness",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Autodominio",
+    "value": "Self-control",
     "pantomima": 2,
     "drawing": 3,
     "speaking": 2
   },
   {
-    "value": "Justicia",
+    "value": "Justice",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Poder",
+    "value": "Power",
     "pantomima": 1,
     "drawing": 1,
     "speaking": 1
   },
   {
-    "value": "Sabiduria",
+    "value": "Knowledge",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Amor Leal",
+    "value": "Loyal Love",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Valentia",
+    "value": "Courage",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Humildad",
+    "value": "Humility",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Modestia",
+    "value": "Modesty",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Lealtad",
+    "value": "Loyality",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Aguante",
+    "value": "Endurance",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Fidelidad",
+    "value": "Fidelity",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Devocion Piadosa",
+    "value": "Godly Devotion",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 3
   },
   {
-    "value": "Hospitalidad",
+    "value": "Hospitality",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Temor",
+    "value": "Fear",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Honradez",
+    "value": "Honesty",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Sumision",
+    "value": "Submission",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Orgullo",
+    "value": "Pride",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Egoismo",
+    "value": "Selfishness",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Avidez",
+    "value": "Avidity",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Envidia",
+    "value": "Envy",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Deslealtad",
+    "value": "Disloyalty",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Ambicion",
+    "value": "Ambition",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Crueldad",
+    "value": "Cruelty",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Cobardia",
+    "value": "Cowardice",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Maldad",
+    "value": "Evil",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Compasión",
+    "value": "Compassion",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Generosidad",
+    "value": "Generosity",
     "pantomima": 1,
     "drawing": 2,
     "speaking": 1
   },
   {
-    "value": "Sinceridad",
+    "value": "Sincerity",
     "pantomima": 3,
     "drawing": 2,
     "speaking": 2
   },
   {
-    "value": "Espiritualidad",
+    "value": "Spirituality",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
