@@ -185,13 +185,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <a 
-          id="settings" 
-          onClick={() => this.showModal(true)} 
-          title={lang[this.state.loc].settings.settings}
-        >
-          &#9881;
-        </a>
+        {this.state.phase === consts.PHASE_ACTIVITY &&
+          <a 
+            id="settings" 
+            onClick={() => this.showModal(true)} 
+            title={lang[this.state.loc].settings.title}
+          >
+            &#9881;
+          </a>
+        }
         <CSSTransitionGroup
           transitionName="component"
           transitionAppear

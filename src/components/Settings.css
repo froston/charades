@@ -16,9 +16,20 @@
   cursor: default;
 }
 
-.settings h2,
-.settings h3 {
+.settings h2  {
   text-transform: uppercase;
+  font-size: 30px;
+}
+
+.settings h3 {
+  margin: 10px 0 5px 0;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.settings p  {
+  margin: 0;
 }
 
 .settings.show {
