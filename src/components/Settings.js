@@ -28,6 +28,7 @@ class Settings extends React.Component {
           <select onChange={(event) => this.props.setLanguage(event.target.value)} value={this.props.loc}>
             <option value="es">{lang[this.props.loc].settings.es}</option>
             <option value="en">{lang[this.props.loc].settings.en}</option>
+            <option value="cs">{lang[this.props.loc].settings.cs}</option>
           </select>
           <h3>{lang[this.props.loc].settings.rules.title}:</h3>
           <p>{lang[this.props.loc].settings.rules.game}</p>

@@ -132,7 +132,7 @@ class App extends React.Component {
   getLangName = (lang) => {
     if (lang && typeof lang === "string") {
       const short = lang.substring(0,2)
-      if (short === "en" || short === "es" ) {
+      if (short === "en" || short === "es" || short === "cs") {
         return short
       }
     }
@@ -146,7 +146,7 @@ class App extends React.Component {
 
     if (setLang && setLang.length == 2) {
       return setLang
-    } else if (navLang) {
+    } else if (navLang && navLang.length == 2) {
       return navLang
     } else {
       return defaultLang
@@ -211,7 +211,8 @@ class App extends React.Component {
           {this.state.phase === consts.PHASE_LEVEL &&
             <ChooseLevel 
               handleLevel={this.handleLevel} 
-              activity={this.getActivityName()}
+              activity={this.state.activity}
+              activityName={this.getActivityName()}
               loc={this.state.loc} 
             />
           }
