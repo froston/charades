@@ -230,12 +230,21 @@ class App extends React.Component {
             />
           }
         </CSSTransitionGroup>
-        <Settings 
-          show={this.state.showModal} 
-          loc={this.state.loc}
-          setLanguage={this.setLanguage} 
-          closeModal={() => this.showModal(false)} 
-        />
+        <CSSTransitionGroup
+          transitionName="settings"
+          transitionEnter
+          transitionLeave
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+        >
+        {this.state.showModal &&
+          <Settings 
+            loc={this.state.loc}
+            setLanguage={this.setLanguage} 
+            closeModal={() => this.showModal(false)} 
+          />
+        }
+        </CSSTransitionGroup>
         <audio src={beep} />
         <audio src={finish} />
       </div>

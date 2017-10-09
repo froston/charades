@@ -13,14 +13,12 @@ class Settings extends React.Component {
   onKeyDown = (event) => {
     // close on escape
     if (event.keyCode === 27) {
-      if (this.props.show === true) {
-        this.props.closeModal(true)
-      }
+      this.props.closeModal(true)
     }
   }      
   render() {
     return (
-      <div className={this.props.show ? "settings show" : "settings"}  >
+      <div className="settings">
         <div className="modal">
           <button className="close" onClick={this.props.closeModal}>&#10005;</button>
           <h2><span>&#9881; </span>{lang[this.props.loc].settings.title}</h2>
@@ -56,7 +54,6 @@ class Settings extends React.Component {
 
 
 Settings.propTypes = {
-  show: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
   setLanguage: PropTypes.func.isRequired,
   loc: PropTypes.string.isRequired

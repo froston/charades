@@ -40,27 +40,23 @@ button:hover {
   -webkit-transform: translateY(-700px);
   transform: translateY(-700px);
 }
-
 .component-appear.component-appear-active {
   -ms-transform: translateY(0px);
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
   transition: all .7s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-
 .component-enter {
   -ms-transform: translateX(300px);
   -webkit-transform: translateX(300px);
   transform: translateX(300px);
 }
-
 .component-enter.component-enter-active {
   -ms-transform: translateX(0px);
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
   transition: all .3s linear;
 }
-
 
 @media screen and (min-width: 1024px) {
   .component-enter {
