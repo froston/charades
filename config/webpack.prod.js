@@ -1,11 +1,11 @@
 const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const buildDir = path.resolve(__dirname, '../build');
-const appDir = path.resolve(__dirname, '../src');
+const buildDir = path.resolve(__dirname, '../build')
+const appDir = path.resolve(__dirname, '../src')
 
 const config = {
   context: path.resolve(__dirname, '..'),
@@ -43,7 +43,7 @@ const config = {
       dontCacheBustUrlsMatching: /\.\w{8}\./,
       filename: 'service-worker.js',
       logger(message) {
-        console.log(message);
+        console.log(message)
       },
       minify: false,
       navigateFallback: 'index.html',

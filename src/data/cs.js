@@ -1430,4 +1430,4 @@ const words =
   }
 ]
 
-export default words;
+export default words

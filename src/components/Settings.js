@@ -5,10 +5,10 @@ import './Settings.css'
 
 class Settings extends React.Component {
   componentWillMount() {
-    document.addEventListener("keydown", this.onKeyDown);
+    document.addEventListener("keydown", this.onKeyDown)
   }
   componentWillUnmount() {
-      document.removeEventListener("keydown", this.onKeyDown);
+      document.removeEventListener("keydown", this.onKeyDown)
   }
   onKeyDown = (event) => {
     // close on escape

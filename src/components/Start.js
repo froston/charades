@@ -20,18 +20,16 @@ const Start = (props) => {
     props.handleBlur(pos)
   }
   return (
-    <div className={(props.timer ? " fase start counting " : "fase start ") + props.activity}>
+    <div 
+      className={(props.timer ? " fase start counting " : "fase start ") + props.activity}
+      onTouchStart={(event) => handleTouch(event, 'down')}
+      onTouchEnd={(event) => handleTouch(event, 'up')}
+      onMouseDown={() => handleMouse( 'down')}
+      onMouseUp={() => handleMouse( 'up')}
+    >
       <br />
       <h2>{props.activityText}:</h2>
-      <h1 
-        onTouchStart={(event) => handleTouch(event, 'down')}
-        onTouchEnd={(event) => handleTouch(event, 'up')}
-        onMouseDown={() => handleMouse( 'down')}
-        onMouseUp={() => handleMouse( 'up')}
-        className={props.blurred ? '' : 'blurred'}
-      >
-        {props.word}
-      </h1>
+      <h1 className={props.blurred ? '' : 'blurred'}>{props.word}</h1>
       <br />
       {props.timer ? 
         <span>{props.timer}</span>

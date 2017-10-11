@@ -42,7 +42,11 @@ class App extends React.Component {
   }
 
   startTimer = () => {
-    this.setState({ timer: consts.TIMER })
+    // save word to array of used words
+    this.setState({ 
+      timer: consts.TIMER,
+      usedWords: this.state.usedWords.concat(this.state.word + "__" + this.state.activity)
+    })
     this.counter = setInterval(() => {
       this.setState({ timer: this.state.timer - 1 })
       // countdown last 5 seconds
@@ -103,7 +107,7 @@ class App extends React.Component {
   }
 
   getActivityText = () => {
-    const { loc } = this.state;
+    const { loc } = this.state
     switch (this.state.activity) {
       case consts.ACTIVITY_SPEAKING:
         return lang[loc].speaking
@@ -180,12 +184,9 @@ class App extends React.Component {
     })
     if (filtered.length > 0) {
       // choose random word from the selection
-      const index = Math.floor(Math.random() * filtered.length);
-      const finalWord = filtered[index].value;
-      this.setState({ 
-        word: finalWord, 
-        usedWords: this.state.usedWords.concat(finalWord + "__" + this.state.activity)
-      })
+      const index = Math.floor(Math.random() * filtered.length)
+      const finalWord = filtered[index].value
+      this.setState({ word: finalWord })
     } else {
       this.resetGame()
     }
@@ -267,4 +268,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
