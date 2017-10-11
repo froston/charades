@@ -1,4 +1,4 @@
-const lang = {
+const es = {
   speaking: 'Hablá',
   drawing: 'Dibujá',
   pantomima: 'Actuá',
@@ -31,4 +31,4 @@ const lang = {
   }
 }
 
-export default lang
+export default es

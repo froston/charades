@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as consts from '../const'
-import lang from '../lang'
+import lang from '../locale'
 import { microphone, draw, theatre } from '../images'
 
 const Button = (props) => {

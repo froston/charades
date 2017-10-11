@@ -9,7 +9,7 @@ import {
 import * as consts from '../const'
 import { beep, finish } from '../sounds'
 import { words } from '../data'
-import lang from '../lang'
+import lang from '../locale'
 import './App.css'
 
 class App extends React.Component {

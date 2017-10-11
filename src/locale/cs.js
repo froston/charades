@@ -1,4 +1,4 @@
-const lang = {
+const cs = {
   speaking: 'Mluvení',
   drawing: 'Kreslení',
   pantomima: 'Pantomima',
@@ -31,4 +31,4 @@ const lang = {
   }
 }
 
-export default lang
+export default cs

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import lang from '../lang'
+import lang from '../locale'
 import './Settings.css'
 
 class Settings extends React.Component {

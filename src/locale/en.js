@@ -1,4 +1,4 @@
-const lang = {
+const en = {
   speaking: 'Speak',
   drawing: 'Draw',
   pantomima: 'Play',
@@ -31,4 +31,4 @@ const lang = {
   }
 }
 
-export default lang
+export default en
