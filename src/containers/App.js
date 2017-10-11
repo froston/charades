@@ -22,7 +22,7 @@ class App extends React.Component {
       timer: null,
       word: null,
       usedWords: [],
-      blurred: false,
+      blurred: true,
       showModal: false,
       loc: this.getCurrentLanguage()
     }
@@ -103,7 +103,7 @@ class App extends React.Component {
   }
 
   handleBlur = (pos) => {
-    this.setState({ blurred: pos == 'down' ? true : false })
+    this.setState({ blurred: pos === 'up' ? true : false })
   }
 
   getActivityText = () => {

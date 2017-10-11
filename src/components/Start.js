@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import lang from '../locale'
-import './Start.css'
 
 const Start = (props) => {
   const handleStart = () => {
@@ -14,37 +13,116 @@ const Start = (props) => {
   }
   const handleTouch = (event, pos) => {
     event.preventDefault()
-    props.handleBlur(pos)
+    if (props.timer > 0) {
+      props.handleBlur(pos)
+    }
   }
   const handleMouse = (pos) => {
-    props.handleBlur(pos)
+    if (props.timer > 0) {
+      props.handleBlur(pos)
+    }
+  }
+  const styles = {
+    heading: {
+      fontSize: 50,
+      textTransform: 'uppercase',
+      transition: 'filter .5s',
+      WebkitUserSelect: 'none',
+      MozUserSelect: 'none',     
+      msUserSelect: 'none',      
+      userSelect: 'none'
+    },
+    headingBlurred: {
+      fontSize: 50,
+      textTransform: 'uppercase',
+      transition: 'filter .5s',
+      WebkitFilter: 'blur(10px)',
+      MozFilter: 'blur(10px)',
+      msFilter: 'blur(10px)',
+      OFilter: 'blur(10px)',
+      filter: 'blur(10px)'
+    },
+    fase: {
+      backgroundColor: '#fff',
+      color: '#000',
+      transition: 'background-color .5s',
+    },
+    faseCounting: {
+      backgroundColor: props.bgColor,
+      color: '#fff',
+      transition: 'background-color .5s',
+    },
+    span: {
+      flexGrow: 2,
+      fontSize: 100,
+      color: '#fff'
+    },
+    buttonStart: {
+      flexGrow: 1,
+      fontSize: 30,
+      backgroundColor: props.bgColor,
+      color: '#fff'
+    },
+    buttonReturn: {
+      flexGrow: 1,
+      fontSize: 30,
+      backgroundColor: '#fff',
+      color: props.bgColor,
+      borderTop: '1px solid ' + props.bgColor
+    },
+    buttonReset: {
+      flexGrow: 1,
+      fontSize: 30,
+      backgroundColor: props.bgColor,
+      color: '#fff',
+    }
   }
   return (
     <div 
-      className={(props.timer ? " fase start counting " : "fase start ") + props.activity}
+      style={props.timer > 0 ? styles.faseCounting : styles.fase}
+      className='fase start'
       onTouchStart={(event) => handleTouch(event, 'down')}
       onTouchEnd={(event) => handleTouch(event, 'up')}
       onMouseDown={() => handleMouse( 'down')}
       onMouseUp={() => handleMouse( 'up')}
     >
-      <br />
-      <h2>{props.activityText}:</h2>
-      <h1 className={props.blurred ? '' : 'blurred'}>{props.word}</h1>
-      <br />
+      <div style={{ flexGrow: 2 }}>
+        <h2 style={{ fontSize: 20 }}>
+          {props.activityText}:
+        </h2>
+        <h1 style={props.blurred && props.timer > 0 ? styles.headingBlurred : styles.heading}>
+          {props.word}
+        </h1>
+      </div>
       {props.timer ? 
-        <span>{props.timer}</span>
+        <span style={styles.span}>{props.timer}</span>
         :
         // Reset or Start button (div for centering)
         props.timer === 0 ?
-          <div>
-            <button onClick={handleReset} >{lang[props.loc].resetButton}</button>
-          </div>
+          <button 
+            key="reset" 
+            onClick={handleReset} 
+            style={styles.buttonReset} 
+          >
+            {lang[props.loc].resetButton}
+          </button>
         :
-          <div>
-            <button onClick={handleStart} >{lang[props.loc].startButton}</button>
-            <br />
-            <button className="return" onClick={handleReset} >{lang[props.loc].returnButton}</button>
-          </div>
+          [
+            <button 
+              key="start" 
+              onClick={handleStart} 
+              style={styles.buttonStart} 
+            >
+              {lang[props.loc].startButton}
+            </button>,
+            <button 
+              key="return" 
+              onClick={handleReset} 
+              style={styles.buttonReturn} 
+            >
+              {lang[props.loc].returnButton}
+            </button>
+          ]
       }
     </div>
   )

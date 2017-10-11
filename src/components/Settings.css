@@ -19,6 +19,8 @@
 .settings h2  {
   text-transform: uppercase;
   font-size: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .settings h3 {
@@ -37,7 +39,7 @@
   height: 100%;
   position: relative;
   margin: 0 auto;
-  padding: 3em;
+  padding: 10px 30px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: 0px;
