@@ -153,6 +153,19 @@ class App extends React.Component {
     }
   }
 
+  getBgColor = () => {
+    switch (this.state.activity) {
+      case consts.ACTIVITY_SPEAKING:
+        return "#5d1ec9"
+      case consts.ACTIVITY_DRAWING:
+        return "#1dc95c"
+      case consts.ACTIVITY_PANTOMIMA:
+        return "#c91d40"
+      default:
+        return "#000000"
+    }
+  }
+
   setLanguage = (language) => {
     localStorage.setItem("charades_lang", language)
     this.setState({ loc: language })
@@ -213,6 +226,7 @@ class App extends React.Component {
               handleLevel={this.handleLevel} 
               activity={this.state.activity}
               activityName={this.getActivityName()}
+              bgColor={this.getBgColor()}
               loc={this.state.loc} 
             />
           }
@@ -226,6 +240,7 @@ class App extends React.Component {
               timer={this.state.timer} 
               activity={this.getActivityName()}
               activityText={this.getActivityText()}
+              bgColor={this.getBgColor()}
               loc={this.state.loc}
             />
           }
