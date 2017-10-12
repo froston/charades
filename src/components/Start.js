@@ -12,7 +12,6 @@ const Start = (props) => {
     props.resetGame()
   }
   const handleTouch = (event, pos) => {
-    event.preventDefault()
     if (props.timer > 0) {
       props.handleBlur(pos)
     }
