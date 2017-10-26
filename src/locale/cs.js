@@ -8,6 +8,7 @@ const cs = {
   startButton: 'Začít',
   resetButton: 'Znovu',
   returnButton: 'Zpět',
+  stopCountConfirm: 'Opravdu chceš skončit?',
   settings: {
     title: 'Nastavení',
     lang: 'Jazyk',

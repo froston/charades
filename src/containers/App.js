@@ -21,11 +21,24 @@ class App extends React.Component {
       level: null,
       timer: null,
       word: null,
-      usedWords: [],
       blurred: true,
       showModal: false,
       loc: this.getCurrentLanguage()
     }
+  }
+
+  getUsedWords = () => {
+    const usedWords = sessionStorage.getItem("usedWords") || []
+    if (usedWords && usedWords.length) {
+      return JSON.parse(sessionStorage.getItem("usedWords"))
+    }
+    return []
+  }
+  
+  addUsedWord = (word) => {
+    const usedWords = this.getUsedWords()
+    usedWords.push(word)
+    sessionStorage.setItem("usedWords", JSON.stringify(usedWords))
   }
 
   handleActivity = (activity) => {
@@ -45,8 +58,8 @@ class App extends React.Component {
     // save word to array of used words
     this.setState({ 
       timer: consts.TIMER,
-      usedWords: this.state.usedWords.concat(this.state.word + "__" + this.state.activity)
     })
+    this.addUsedWord(this.state.word + "__" + this.state.activity)
     this.counter = setInterval(() => {
       this.setState({ timer: this.state.timer - 1 })
       // countdown last 5 seconds
@@ -99,7 +112,7 @@ class App extends React.Component {
       level: null,
       timer: null,
       word: null,
-    })
+    }, this.stopTimer())
   }
 
   handleBlur = (pos) => {
@@ -177,10 +190,11 @@ class App extends React.Component {
 
   getWord = () => {
     const allWords = words[this.state.loc]
+    const usedWords = this.getUsedWords()
     const filtered = allWords.filter((word) => {
       // choose a word fitting activity, level and must not be used yet
       return word[this.getActivityName()] === this.state.level && 
-        !this.state.usedWords.includes(word.value + "__" + this.state.activity)
+        !usedWords.includes(word.value + "__" + this.state.activity)
     })
     if (filtered.length > 0) {
       // choose random word from the selection

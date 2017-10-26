@@ -11,6 +11,11 @@ const Start = (props) => {
   const handleReset = () => {
     props.resetGame()
   }
+  const handleStopCount = () => {
+    if (confirm(lang[props.loc].stopCountConfirm)) {
+      props.resetGame()
+    }
+  }
   const handleTouch = (event, pos) => {
     if (props.timer > 0) {
       props.handleBlur(pos)
@@ -69,6 +74,13 @@ const Start = (props) => {
       color: props.bgColor,
       borderTop: '1px solid ' + props.bgColor
     },
+    buttonStopCount: {
+      flexGrow: 1,
+      fontSize: 30,
+      backgroundColor: props.bgColor,
+      color: '#fff',
+      borderTop: '1px solid #fff'
+    },
     buttonReset: {
       flexGrow: 1,
       fontSize: 30,
@@ -94,9 +106,17 @@ const Start = (props) => {
         </h1>
       </div>
       {props.timer ? 
-        <span style={styles.span}>{props.timer}</span>
+        [
+          <span key="counter" style={styles.span}>{props.timer}</span>,
+          <button 
+            key="stopCount" 
+            onClick={handleStopCount} 
+            style={styles.buttonStopCount} 
+          >
+            {lang[props.loc].returnButton}
+          </button>
+        ]
         :
-        // Reset or Start button (div for centering)
         props.timer === 0 ?
           <button 
             key="reset" 

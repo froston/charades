@@ -8,6 +8,7 @@ const en = {
   startButton: 'Start',
   resetButton: 'Restart',
   returnButton: 'Return',
+  stopCountConfirm: 'Do you really want to stop?',
   settings: {
     title: 'Settings',
     lang: 'Language',
