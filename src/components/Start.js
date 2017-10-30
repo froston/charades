@@ -75,7 +75,7 @@ const Start = (props) => {
       borderTop: '1px solid ' + props.bgColor
     },
     buttonStopCount: {
-      flexGrow: 1,
+      flexGrow: 3,
       fontSize: 30,
       backgroundColor: props.bgColor,
       color: '#fff',
