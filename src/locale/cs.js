@@ -19,7 +19,7 @@ const cs = {
     cs: "Čeština",
     rules: {
       title: "Pravidla",
-      game: "Skupina o dvou a více lidech se snaží uhádnout dané slovo a tak vyhrát určitý počet bodů. První skupina vzbere jednoho z jejich hráčů - zástupce, aby vysvětlil dané slovo. V následujících kolech se v této pozici postupně vystřídají všichni hráči skupiny. Zástupce vybere aktivitu:",
+      game: "Skupina o dvou a více lidech se snaží uhádnout dané slovo a tak vyhrát určitý počet bodů. První skupina vybere jednoho z jejich hráčů - zástupce, aby vysvětlil dané slovo. V následujících kolech se v této pozici postupně vystřídají všichni hráči skupiny. Zástupce vybere aktivitu:",
       speaking: "Nesmí se použít dané slovo, jeho části nebo odvozené slova.",
       drawing: "Nesmí se mluvit a kresba nesmí obsahovat čísla nebo znaky.",
       pantomima: "Nesmí se mluvit, vydávat zvuky ani používat objekty.",

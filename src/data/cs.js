@@ -679,7 +679,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Josefůf Oblek",
+    "value": "Josefůf Oděv",
     "pantomima": 3,
     "drawing": 3,
     "speaking": 2
@@ -1423,7 +1423,7 @@ const words =
     "speaking": 2
   },
   {
-    "value": "Duchovnost",
+    "value": "Duchovní Stav",
     "pantomima": 2,
     "drawing": 2,
     "speaking": 1
