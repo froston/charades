@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -22,16 +23,6 @@ const config = {
         NODE_ENV: JSON.stringify('production'),
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        comparisons: false,
-      },
-      output: {
-        comments: false,
-        ascii_only: true,
-      },
-    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
@@ -49,10 +40,10 @@ const config = {
       navigateFallback: 'index.html',
       navigateFallbackWhitelist: [/^(?!\/__).*/],
     }),
-    new CopyWebpackPlugin([{ 
-        from: 'public', 
-        to: buildDir
-      }],
+    new CopyWebpackPlugin([{
+      from: 'public',
+      to: buildDir
+    }],
       {
         ignore: [
           'index.html'
@@ -86,6 +77,11 @@ const config = {
         }
       }
     ],
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
   }
 }
 
